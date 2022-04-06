@@ -1,0 +1,44 @@
+#+title: C Doodles Hacking Guide
+#+author: Ulysses Carlos
+
+The Hacking Guide is a document that contains the rough outline of a program. It is designed to help me document my thought process so that I or anyone else can see how I developed a program in the repository.
+* Connect Four
+Win Conditions:
+4 in a row
+4 down, 4 up
+4 diagonal (left and right)
+
+When you place a piece, you can only place on the back portion, which may need a linked list or regular array.
+
+
+
+Each user has a vector that contains the indecies of each piece they placed.
+this vector is checked for win conditions each time a player places a turn.
+
+
+so it can be:
+
+while true:
+      player 1 places a piece
+      check player 1's vector to see if he wins
+
+      player 2 places a piece.
+      check player 2's vector to see if he wins
+
+
+
+
+Tile object
+The tile object is what a vector will be made of. The tile contains a character that is displayed on the screen. Two characters can be '#' and '@', for player 1 and player 2 respectively
+
+Map data structure:
+vector of linked_lists or fixed array/vector of type Tile
+
+Player piece data structure:
+Map of std::tuple<x, y> where x and y are the row and column numbers of the piece that the player placed. Maps are used in order to automatically sort the list, and the win conditions go through the map. I have to write a manual sorting function for the map.
+
+
+Win conditions:
+As stated earlier, the player must have four pieces that are in a straight horizontal, vertical, or diagonal line. I don't want to check the entire board for pieces, so these conditions will only work with the each player's piece map. If any of the win conditions return true, then the game ends. The tuples have to be sorted for comparisons.
+
+* 

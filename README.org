@@ -1,0 +1,6 @@
+#+title: Connect Four
+#+author: Ulysses Carlos
+#+date: <2022-04-05 Tue>
+
+
+* How to compile

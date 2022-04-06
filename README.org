@@ -3,4 +3,11 @@
 #+date: <2022-04-05 Tue>
 
 
+* Future Plans
+I plan to expand the program to include a GUI made in Qt5/6.
 * How to compile
+Since this is a CMake Project, you can do the following:
+#+begin_src bash
+  cmake .
+  make
+#+end_src
